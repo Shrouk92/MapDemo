@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mynav"
+    app:startDestination="@id/navHostFragment">
+    <fragment
+        android:id="@+id/navHostFragment"
+        android:name="com.example.mapdemo.fragments.NavHostFragment"
+        android:label="fragment_nav_host"
+        tools:layout="@layout/fragment_nav_host" >
+        <action
+            android:id="@+id/action_navHostFragment_to_mapsFragmentWithIntent"
+            app:destination="@id/mapsFragmentWithIntent" />
+        <action
+            android:id="@+id/action_navHostFragment_to_searchWithTextMapActivity"
+            app:destination="@id/searchWithTextMapActivity" />
+        <action
+            android:id="@+id/action_navHostFragment_to_searchWithVoiceMapActivity"
+            app:destination="@id/searchWithVoiceMapActivity" />
+        <action
+            android:id="@+id/action_navHostFragment_to_satalliteViewMapFrgment"
+            app:destination="@id/satalliteViewMapFrgment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragmentWithIntent"
+        android:name="com.example.mapdemo.fragments.MapsFragmentWithIntent"
+        android:label="fragment_maps_with_intent"
+        tools:layout="@layout/fragment_maps_with_intent" >
+        <action
+            android:id="@+id/action_mapsFragmentWithIntent_to_navHostFragment"
+            app:destination="@id/navHostFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/searchWithTextMapActivity"
+        android:name="com.example.mapdemo.activities.SearchWithTextMapActivity"
+        android:label="activity_search_with_text_map_acivity"
+        tools:layout="@layout/activity_search_with_text_map_acivity" />
+    <activity
+        android:id="@+id/searchWithVoiceMapActivity"
+        android:name="com.example.mapdemo.activities.SearchWithVoiceMapActivity"
+        android:label="activity_search_with_voice_map"
+        tools:layout="@layout/activity_search_with_voice_map" />
+    <fragment
+        android:id="@+id/satalliteViewMapFrgment"
+        android:name="com.example.mapdemo.fragments.SatalliteViewMapFrgment"
+        android:label="fragment_satallite_view_map_frgment"
+        tools:layout="@layout/fragment_satallite_view_map_frgment" >
+        <action
+            android:id="@+id/action_satalliteViewMapFrgment_to_navHostFragment"
+            app:destination="@id/navHostFragment" />
+    </fragment>
+</navigation>
